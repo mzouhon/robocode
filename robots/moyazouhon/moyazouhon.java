@@ -68,7 +68,7 @@ public class MoyaZouhon extends Robot {
         turnLeft(angle);
 	}
 
- }      
+}     
     
    
    
