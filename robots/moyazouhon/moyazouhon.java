@@ -18,6 +18,8 @@ public class MoyaZouhon extends Robot {
 
        
         
+        
+        
 		// controls generic movement for entire game
 		while (true) {
             
@@ -44,6 +46,7 @@ public class MoyaZouhon extends Robot {
             
             
        }
+       //controls what happenes when another robot is detected
        public void onScannedRobot(ScannedRobotEvent e) {
         double distance= e.getDistance();    
 
@@ -57,16 +60,16 @@ public class MoyaZouhon extends Robot {
             fire(.5);
         }
     }
+    //modeled after Fire and Crazy Robot
     public void onHitByBullet(HitByBulletEvent e) {
 		turnLeft(90 - (getHeading() - e.getHeading()));
 		ahead(500);
 	}
-
-    public void onHitWall(HitWallEvent e) {
-		Random randomAngle= new Random();
-            int angle= randomAngle.nextInt(360);
-        turnLeft(angle);
-	}
+     //random angled turn picked when robot runs into wall- does not help robot so it's been scrapped
+    //public void onHitWall(HitWallEvent e) {
+            //int angle= randomAngle.nextInt(360);
+        //turnLeft(angle);
+	//}
 
 }     
     
