@@ -8,7 +8,7 @@ import robocode.HitByBulletEvent;
 
 public class MoyaZouhon extends Robot {
  
-    public void run();
+    public void run(){
 
         setBodyColor(Color.pink);
 		setGunColor(Color.pink); 
